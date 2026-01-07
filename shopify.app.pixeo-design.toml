@@ -1,0 +1,20 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "d7a72ff31e1909c01122487795eb0b68"
+name = "Pixeo Design"
+application_url = "https://pixeo-app-7h8e.onrender.com"
+embedded = true
+
+[webhooks]
+api_version = "2026-01"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,read_themes,write_products,write_themes"
+
+[auth]
+redirect_urls = [
+  "https://pixeo-app-7h8e.onrender.com/auth/callback",
+  "https://pixeo-app-7h8e.onrender.com/auth/shopify/callback",
+  "https://pixeo-app-7h8e.onrender.com/api/auth/callback"
+]

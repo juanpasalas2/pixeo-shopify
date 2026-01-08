@@ -411,6 +411,7 @@ export type Database = {
           is_deleted: boolean | null
           parent_chat_id: string | null
           title: string | null
+          type: string
           updated_at: string | null
           user_id: string | null
         }
@@ -423,6 +424,7 @@ export type Database = {
           is_deleted?: boolean | null
           parent_chat_id?: string | null
           title?: string | null
+          type?: string
           updated_at?: string | null
           user_id?: string | null
         }
@@ -435,6 +437,7 @@ export type Database = {
           is_deleted?: boolean | null
           parent_chat_id?: string | null
           title?: string | null
+          type?: string
           updated_at?: string | null
           user_id?: string | null
         }
@@ -860,6 +863,7 @@ export type Database = {
           is_active: boolean
           scope: string | null
           shop_url: string
+          shopify_id: string | null
           uninstalled_at: string | null
           updated_at: string | null
           user_id: string
@@ -871,6 +875,7 @@ export type Database = {
           is_active?: boolean
           scope?: string | null
           shop_url: string
+          shopify_id?: string | null
           uninstalled_at?: string | null
           updated_at?: string | null
           user_id: string
@@ -882,6 +887,7 @@ export type Database = {
           is_active?: boolean
           scope?: string | null
           shop_url?: string
+          shopify_id?: string | null
           uninstalled_at?: string | null
           updated_at?: string | null
           user_id?: string
@@ -898,6 +904,8 @@ export type Database = {
           is_active: boolean
           isCustom: boolean | null
           landing_page_credits: number
+          max_campaings: number
+          max_landing_pages: number
           max_stores: number
           name: string
           price: number
@@ -912,6 +920,8 @@ export type Database = {
           is_active?: boolean
           isCustom?: boolean | null
           landing_page_credits?: number
+          max_campaings?: number
+          max_landing_pages?: number
           max_stores?: number
           name: string
           price: number
@@ -926,6 +936,8 @@ export type Database = {
           is_active?: boolean
           isCustom?: boolean | null
           landing_page_credits?: number
+          max_campaings?: number
+          max_landing_pages?: number
           max_stores?: number
           name?: string
           price?: number
@@ -1272,6 +1284,33 @@ export type Database = {
           credits_used?: number
           id?: string
           updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_fingerprints: {
+        Row: {
+          components: Json | null
+          created_at: string | null
+          fingerprint_id: string
+          id: string
+          last_seen_at: string | null
+          user_id: string
+        }
+        Insert: {
+          components?: Json | null
+          created_at?: string | null
+          fingerprint_id: string
+          id?: string
+          last_seen_at?: string | null
+          user_id: string
+        }
+        Update: {
+          components?: Json | null
+          created_at?: string | null
+          fingerprint_id?: string
+          id?: string
+          last_seen_at?: string | null
           user_id?: string
         }
         Relationships: []

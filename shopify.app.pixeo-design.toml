@@ -8,6 +8,10 @@ embedded = true
 [webhooks]
 api_version = "2026-01"
 
+[[webhooks.subscriptions]]
+compliance_topics = [ "customers/data_request", "customers/redact", "shop/redact" ]
+uri = "https://pixeo-app-7h8e.onrender.com/webhooks/privacy"
+
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "read_products,read_themes,write_products,write_themes,write_files,read_files,write_metaobjects,read_metaobjects,write_locations,read_locations,write_markets_home,read_markets_home,write_theme_code"
